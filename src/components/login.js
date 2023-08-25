@@ -1,4 +1,4 @@
-import { View, Text, Input, Button } from 'react-native'
+import { View, Text, Input, Button, TextInput } from 'react-native'
 import React from 'react'
 
 const login = () => {
@@ -13,9 +13,9 @@ const login = () => {
   return (
     <View>
       <Text>login</Text>
-      <Input></Input>
-      <Input></Input>
-      <Button>Log In</Button>
+      <TextInput onChange={val => setEmail(val)}></TextInput>
+      <TextInput onChange={val => setPassword(val)}></TextInput>
+      <Button onPress={(handleLogin(email, password))}>Log In</Button>
     </View>
   )
 }
